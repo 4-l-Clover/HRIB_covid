@@ -1,0 +1,83 @@
+/*Login Styles*/
+
+.@{class-prefix}-login-wrapper {
+  .login-content {
+    .login-title {
+      font-size: 48px;
+    }
+    .form-wrapper {
+      margin-top: 83px;
+      width: 472px;
+      padding-right: 20px;
+      padding-left: 20px;
+      .login-desc {
+        margin-top: 10px;
+        line-height: 21px;
+        margin-bottom: 35px;
+      }
+      .username-wrapper {
+        margin-bottom: 9px;
+        .ant-col.ant-form-item-label {
+          padding-bottom: 5px !important;
+          label {
+            color: @ss-gray-1;
+            font-size: 11px;
+          }
+        }
+      }
+      .password-wrapper {
+        margin-bottom: 8px;
+        .ant-col.ant-form-item-label {
+          padding-bottom: 5px !important;
+          label {
+            color: @ss-gray-1;
+            font-size: 11px;
+          }
+        }
+      }
+      .login-btn-wrapper {
+        margin-bottom: -4px;
+      }
+      .hr {
+        margin-right: -20px;
+        margin-left: -20px;
+      }
+      .register-btn-wrapper {
+        margin-bottom: 0;
+        padding-top: 8px;
+      }
+      .login-alert {
+        background: #e9a2ad;
+      }
+    }
+  }
+}
+
+.@{class-prefix}-user-logo-div {
+  width: 100vw;
+  height: 150px;
+  img {
+    height: 50%;
+  }
+}
+
+.@{class-prefix}-user-navbar {
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-evenly;
+  & > a {
+    color: #4b5c6b;
+    &.active {
+      color: @primary-color;
+      .title {
+        border-bottom-color: @primary-color;
+      }
+    }
+  }
+  .title {
+    padding: 0.5em 1em;
+    border-bottom: 3px solid white;
+  }
+}

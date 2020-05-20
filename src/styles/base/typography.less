@@ -1,0 +1,930 @@
+/*Typography Styles*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @header-font-family;
+  color: @header-text-color;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+  margin: 0px;
+}
+
+h1, .h1 {
+  font-size: @h1-font-size;
+
+  .framed-layout & {
+    font-size: @h2-font-size;
+
+    @media screen and (max-width: @screen-sm-max) {
+      font-size: @h3-font-size;
+    }
+  }
+
+  .boxed-layout & {
+    font-size: @h3-font-size;
+
+    @media screen and (max-width: @screen-sm-max) {
+      font-size: @h4-font-size;
+    }
+  }
+
+  @media screen and (min-width: @screen-xxl-min) {
+    font-size: @h1-font-size + 6px;
+
+    .boxed-layout & {
+      font-size: @h3-font-size;
+    }
+  }
+}
+
+h2, .h2 {
+  font-size: @h2-font-size;
+}
+
+h3, .h3 {
+  font-size: @h3-font-size;
+}
+
+h4, .h4 {
+  font-size: @h4-font-size;
+}
+
+h5, .h5 {
+  font-size: @h5-font-size;
+}
+
+h6, .h6 {
+  font-size: @h6-font-size;
+}
+
+.@{class-prefix}-h1-lg {
+  font-size: @h1-font-size + 6px;
+}
+
+.@{class-prefix}-text-strikethrough {
+  text-decoration: line-through !important;
+}
+
+.@{class-prefix}-text-underline {
+  text-decoration: underline !important;
+}
+
+/*Font size Classes*/
+/*8px*/
+.@{class-prefix}-fs-xxs {
+  font-size: @font-size-sm - 4px;
+}
+
+/*10px*/
+.@{class-prefix}-fs-xs {
+  font-size: @font-size-sm - 2px;
+}
+
+/*11px*/
+.@{class-prefix}-fs-11 {
+  font-size: @font-size-sm - 1px;
+}
+
+/*12px*/
+.@{class-prefix}-fs-sm {
+  font-size: @font-size-sm;
+  line-height: 1.5;
+}
+
+.@{class-prefix}-fs-13-20 {
+  font-size: @font-size-sm + 1px;
+  line-height: 20px;
+}
+
+.@{class-prefix}-fs-13-24 {
+  font-size: @font-size-sm + 1px;
+  line-height: 24px;
+}
+
+/*14px*/
+.@{class-prefix}-fs-md {
+  font-size: @font-size-base;
+  line-height: 1;
+}
+
+/*16px*/
+.@{class-prefix}-fs-lg {
+  font-size: @font-size-lg;
+  line-height: 1;
+}
+
+/*18px*/
+.@{class-prefix}-fs-18 {
+  font-size: @font-size-lg + 2px;
+  line-height: 1;
+}
+
+/*20px*/
+.@{class-prefix}-fs-xl {
+  font-size: @font-size-lg + 4px;
+  line-height: 1;
+}
+
+.@{class-prefix}-fs-xl-nl {
+  font-size: @font-size-lg + 4px;
+}
+
+/*24px*/
+.@{class-prefix}-fs-xxl {
+  font-size: @font-size-lg + 8px;
+  line-height: 1.3;
+
+  @media screen and (max-width: @screen-lg-max) {
+    font-size: @font-size-lg + 4px;
+  }
+}
+
+/*28px*/
+.@{class-prefix}-fs-2xl {
+  font-size: (2*@font-size-base) !important;
+  line-height: 1;
+
+  @media screen and (max-width: 1199px) {
+    font-size: (2*@font-size-base - 8) !important;
+  }
+}
+
+/*30px*/
+.@{class-prefix}-fs-xxxl {
+  font-size: 2*@font-size-lg - 2px;
+  line-height: 1;
+
+  @media screen and (max-width: (@screen-xl-min + 166px)) {
+    font-size: 2*@font-size-lg - 4px;
+  }
+
+  @media screen and (max-width: @screen-lg-max) {
+    font-size: 2*@font-size-lg - 6px;
+  }
+
+  @media screen and (max-width: @screen-md-max) {
+    font-size: 2*@font-size-lg - 8px;
+  }
+}
+
+/*40px*/
+.@{class-prefix}-fs-xlxl {
+  font-size: 2*@font-size-lg + 8px;
+  line-height: 1;
+
+  @media screen and (max-width: @screen-lg-max) {
+    font-size: 2*@font-size-lg;
+  }
+
+  @media screen and (max-width: @screen-md-max) {
+    font-size: 2*@font-size-lg - 4px;
+  }
+}
+
+/*50px*/
+.@{class-prefix}-fs-icon-lg {
+  font-size: 3*@font-size-lg + 2px;
+  line-height: 1;
+
+  @media screen and (max-width: (@screen-xl-min + 166px)) {
+    font-size: 2*@font-size-lg + 6px;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {
+    font-size: 2*@font-size-lg - 2px;
+  }
+}
+
+/*54px*/
+.@{class-prefix}-fs-iconcard {
+  font-size: 3*@font-size-lg + 6px;
+  line-height: 1;
+
+  @media screen and (max-width: (@screen-xl-min + 166px)) {
+    font-size: 2*@font-size-lg + 2px;
+  }
+}
+
+// Text Transform class
+.@{class-prefix}-text-lowercase {
+  text-transform: lowercase;
+}
+
+.@{class-prefix}-text-uppercase {
+  text-transform: uppercase;
+}
+
+.@{class-prefix}-text-capitalize {
+  text-transform: capitalize;
+}
+
+// Font Weight class
+.@{class-prefix}-font-weight-light {
+  font-weight: @font-weight-light;
+}
+
+.@{class-prefix}-font-weight-normal {
+  font-weight: @font-weight-normal;
+}
+
+.@{class-prefix}-font-weight-medium {
+  font-weight: @font-weight-medium;
+}
+
+.@{class-prefix}-font-weight-semi-bold {
+  font-weight: @font-weight-semi-bold;
+}
+
+.@{class-prefix}-font-weight-bold {
+  font-weight: @font-weight-bold;
+}
+
+.@{class-prefix}-font-weight-heavy {
+  font-weight: @font-weight-heavy;
+}
+
+// Font Italic class
+.@{class-prefix}-font-italic {
+  font-style: italic;
+}
+
+// Letter Spacing class
+.@{class-prefix}-letter-spacing-base {
+  letter-spacing: @letter-spacing-base;
+}
+
+.@{class-prefix}-letter-spacing-lg {
+  letter-spacing: @letter-spacing-lg;
+}
+
+.@{class-prefix}-letter-spacing-xl {
+  letter-spacing: @letter-spacing-xl;
+}
+
+// Text class
+.@{class-prefix}-text-justify {
+  text-align: justify !important;
+}
+
+.@{class-prefix}-text-nowrap {
+  white-space: nowrap !important;
+}
+
+.@{class-prefix}-text-left {
+  text-align: left !important;
+}
+
+.@{class-prefix}-text-right {
+  text-align: right !important;
+}
+
+.@{class-prefix}-text-center {
+  text-align: center !important;
+}
+
+.@{class-prefix}-text-italic {
+  font-style: italic;
+}
+
+// class use for extend
+.@{class-prefix}-text-truncate {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.@{class-prefix}-border-radius-2 {
+  border-radius: 2px !important;
+}
+
+.@{class-prefix}-sub-title-container {
+  // margin-top: -@layout-main-content-padding;
+  height: 58px;
+}
+
+.@{class-prefix}-sub-title {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-medium;
+  color: @header-text-color;
+}
+
+// ss font size
+a.hover-underline {
+  &:hover {
+      text-decoration: underline;
+  }
+}
+.@{class-prefix}-font-size-7 {
+  font-size: 7px !important;
+}
+.@{class-prefix}-font-size-8 {
+  font-size: 8px !important;
+}
+.@{class-prefix}-font-size-9 {
+  font-size: 9px !important;
+}
+.@{class-prefix}-font-size-10 {
+  font-size: 10px !important;
+}
+.@{class-prefix}-font-size-11 {
+  font-size: 11px !important;
+}
+.@{class-prefix}-font-size-12 {
+  font-size: 12px !important;
+}
+.@{class-prefix}-font-size-13 {
+  font-size: 13px !important;
+}
+.@{class-prefix}-font-size-14 {
+  font-size: 14px !important;
+}
+.@{class-prefix}-font-size-15 {
+  font-size: 15px !important;
+}
+.@{class-prefix}-font-size-16 {
+  font-size: 16px !important;
+}
+.@{class-prefix}-font-size-17 {
+  font-size: 17px !important;
+}
+.@{class-prefix}-font-size-18 {
+  font-size: 18px !important;
+}
+.@{class-prefix}-font-size-19 {
+  font-size: 19px !important;
+}
+.@{class-prefix}-font-size-20 {
+  font-size: 20px !important;
+}
+.@{class-prefix}-font-size-21 {
+  font-size: 21px !important;
+}
+.@{class-prefix}-font-size-22 {
+  font-size: 22px !important;
+}
+.@{class-prefix}-font-size-23 {
+  font-size: 23px !important;
+}
+.@{class-prefix}-font-size-25 {
+  font-size: 25px !important;
+}
+.@{class-prefix}-font-size-27 {
+  font-size: 27px !important;
+}
+.@{class-prefix}-font-size-28 {
+  font-size: 28px !important;
+}
+.@{class-prefix}-font-size-32 {
+  font-size: 32px !important;
+}
+.@{class-prefix}-font-size-35 {
+  font-size: 35px !important;
+}
+.@{class-prefix}-font-size-48 {
+  font-size: 48px !important;
+}
+.@{class-prefix}-font-size-52 {
+  font-size: 52px !important;
+}
+.@{class-prefix}-dot-primary {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: @primary-color;
+}
+// ss color and background color
+@ss-gray-1: #c7c7c7;
+@ss-gray-15: #959595;
+@ss-gray-2: #a1a1a1;
+@ss-gray-3: #7c7c7c;
+@ss-gray-4: #6b6b6b;
+@ss-gray-5: #5f5f5f;
+@ss-gray-b: #b7b7b7;
+@ss-gray-d: #d7d7d7;
+@ss-gray-03: #373737;
+@ss-gray-04: #474747;
+@ss-gray-09: #979797;
+@ss-gray-08: #878787;
+
+.@{class-prefix}-bg-primary {
+  background-color: @primary-color !important;
+}
+.@{class-prefix}-bg-white {
+  background-color: @white-color !important;
+}
+.@{class-prefix}-bg-fb {
+  background-color: #fbfbfb !important;
+}
+.@{class-prefix}-bg-f8 {
+  background-color: #f8f8f8 !important;
+}
+.@{class-prefix}-bg-f5 {
+  background-color: #f5f5f5 !important;
+}
+.@{class-prefix}-bg-ed {
+  background-color: #ededed !important;
+}
+.@{class-prefix}-color-white {
+  color: white !important;
+}
+.@{class-prefix}-color-black {
+  color: black !important;
+}
+.@{class-prefix}-color-primary {
+  color: @primary-color !important;
+}
+.@{class-prefix}-color-grayb {
+  color: @ss-gray-b !important;
+}
+.@{class-prefix}-color-grayd {
+  color: @ss-gray-d !important;
+}
+.@{class-prefix}-color-gray1,
+.@{class-prefix}-color-grayc {
+  color: @ss-gray-1 !important;
+}
+.@{class-prefix}-color-gray15 {
+  color: @ss-gray-15 !important;
+}
+.@{class-prefix}-color-graya,
+.@{class-prefix}-color-gray2 {
+  color: @ss-gray-2 !important;
+}
+.@{class-prefix}-color-gray07,
+.@{class-prefix}-color-gray3 {
+  color: @ss-gray-3 !important;
+}
+.@{class-prefix}-color-gray06,
+.@{class-prefix}-color-gray4 {
+  color: @ss-gray-4 !important;
+}
+.@{class-prefix}-color-gray05,
+.@{class-prefix}-color-gray5 {
+  color: @ss-gray-5 !important;
+}
+.@{class-prefix}-color-gray03 {
+  color: @ss-gray-03 !important;
+}
+.@{class-prefix}-color-gray04 {
+  color: @ss-gray-04 !important;
+}
+.@{class-prefix}-color-gray09 {
+  color: @ss-gray-09 !important;
+}
+.@{class-prefix}-color-gray08 {
+  color: @ss-gray-08 !important;
+}
+// ss border radius
+.@{class-prefix}-border-radius-none {
+  border-radius: 0 !important;
+}
+.@{class-prefix}-border-radius-5 {
+  border-radius: 5px !important;
+}
+.@{class-prefix}-border-radius-9 {
+  border-radius: 9px !important;
+}
+.@{class-prefix}-border-radius-15 {
+  border-radius: 15px !important;
+}
+.@{class-prefix}-border-radius-50-p {
+  border-radius: 50% !important;
+}
+.@{class-prefix}-border-2-ddd {
+  border: 2px solid #ddd !important;
+}
+.@{class-prefix}-border-2-b3 {
+  border: 2px solid #b3b3b3 !important;
+}
+.@{class-prefix}-border-2-e0 {
+  border: 2px solid #e0e0e0 !important;
+}
+.@{class-prefix}-border-2-primary {
+  border: 2px solid @primary-color !important;
+}
+.@{class-prefix}-border-1-ddd {
+  border: 1px solid #ddd !important;
+}
+.@{class-prefix}-border-1-c0 {
+  border: 1px solid #c0c0c0 !important;
+}
+.@{class-prefix}-border-1-f1 {
+  border: 1px solid #f1f1f1 !important;
+}
+.@{class-prefix}-border-1-ad {
+  border: 1px solid #adadad !important;
+}
+.@{class-prefix}-bb-1-ddd {
+  border-bottom: 1px solid #ddd !important;
+}
+.@{class-prefix}-bb-1-f1 {
+  border-bottom: 1px solid #f1f1f1 !important;
+}
+.@{class-prefix}-br-1-ddd {
+  border-right: 1px solid #ddd !important;
+}
+.@{class-prefix}-bl-1-ddd {
+  border-left: 1px solid #ddd !important;
+}
+.@{class-prefix}-br-none {
+  border-right: none !important;
+}
+// ss z-index
+.@{class-prefix}-z-index--1 {
+  z-index: -1 !important;
+}
+// ss force center
+.@{class-prefix}-ss-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+// ss between center
+.@{class-prefix}-between-center {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+// ss width & height
+.@{class-prefix}-w-100-p {
+  width: 100% !important;
+}
+.@{class-prefix}-w-50-p {
+  width: 50% !important;
+}
+.@{class-prefix}-h-100-p {
+  height: 100% !important;
+}
+// ss margin em
+.@{class-prefix}-mt-em-p5,
+.@{class-prefix}-my-em-p5 {
+  margin-top: 0.5em !important;
+}
+.@{class-prefix}-mb-em-p5,
+.@{class-prefix}-my-em-p5 {
+  margin-bottom: 0.5em !important;
+}
+.@{class-prefix}-ml-em-p5,
+.@{class-prefix}-mx-em-p5 {
+  margin-left: 0.5em !important;
+}
+.@{class-prefix}-mr-em-p5,
+.@{class-prefix}-mx-em-p5 {
+  margin-right: 0.5em !important;
+}
+
+.@{class-prefix}-mt-em-1,
+.@{class-prefix}-my-em-1 {
+  margin-top: 1em !important;
+}
+.@{class-prefix}-mb-em-1,
+.@{class-prefix}-my-em-1 {
+  margin-bottom: 1em !important;
+}
+.@{class-prefix}-ml-em-1,
+.@{class-prefix}-mx-em-1 {
+  margin-left: 1em !important;
+}
+.@{class-prefix}-mr-em-1,
+.@{class-prefix}-mx-em-1 {
+  margin-right: 1em !important;
+}
+
+.@{class-prefix}-mt-em-1p5,
+.@{class-prefix}-my-em-1p5 {
+  margin-top: 1.5em !important;
+}
+.@{class-prefix}-mb-em-1p5,
+.@{class-prefix}-my-em-1p5 {
+  margin-bottom: 1.5em !important;
+}
+.@{class-prefix}-ml-em-1p5,
+.@{class-prefix}-mx-em-1p5 {
+  margin-left: 1.5em !important;
+}
+.@{class-prefix}-mr-em-1p5,
+.@{class-prefix}-mx-em-1p5 {
+  margin-right: 1.5em !important;
+}
+
+.@{class-prefix}-mt-em-2,
+.@{class-prefix}-my-em-2 {
+  margin-top: 2em !important;
+}
+.@{class-prefix}-mb-em-2,
+.@{class-prefix}-my-em-2 {
+  margin-bottom: 2em !important;
+}
+.@{class-prefix}-ml-em-2,
+.@{class-prefix}-mx-em-2 {
+  margin-left: 2em !important;
+}
+.@{class-prefix}-mr-em-2,
+.@{class-prefix}-mx-em-2 {
+  margin-right: 2em !important;
+}
+
+.@{class-prefix}-mt-em-2p5,
+.@{class-prefix}-my-em-2p5 {
+  margin-top: 2.5em !important;
+}
+.@{class-prefix}-mb-em-2p5,
+.@{class-prefix}-my-em-2p5 {
+  margin-bottom: 2.5em !important;
+}
+.@{class-prefix}-ml-em-2p5,
+.@{class-prefix}-mx-em-2p5 {
+  margin-left: 2.5em !important;
+}
+.@{class-prefix}-mr-em-2p5,
+.@{class-prefix}-mx-em-2p5 {
+  margin-right: 2.5em !important;
+}
+
+.@{class-prefix}-mt-em-3,
+.@{class-prefix}-my-em-3 {
+  margin-top: 3em !important;
+}
+.@{class-prefix}-mb-em-3,
+.@{class-prefix}-my-em-3 {
+  margin-bottom: 3em !important;
+}
+.@{class-prefix}-ml-em-3,
+.@{class-prefix}-mx-em-3 {
+  margin-left: 3em !important;
+}
+.@{class-prefix}-mr-em-3,
+.@{class-prefix}-mx-em-3 {
+  margin-right: 3em !important;
+}
+
+.@{class-prefix}-mt-em-5,
+.@{class-prefix}-my-em-5 {
+  margin-top: 5em !important;
+}
+.@{class-prefix}-mb-em-5,
+.@{class-prefix}-my-em-5 {
+  margin-bottom: 5em !important;
+}
+.@{class-prefix}-ml-em-5,
+.@{class-prefix}-mx-em-5 {
+  margin-left: 5em !important;
+}
+.@{class-prefix}-mr-em-5,
+.@{class-prefix}-mx-em-5 {
+  margin-right: 5em !important;
+}
+
+// ss padding em
+.@{class-prefix}-pt-em-p5,
+.@{class-prefix}-py-em-p5 {
+  padding-top: 0.5em !important;
+}
+.@{class-prefix}-pb-em-p5,
+.@{class-prefix}-py-em-p5 {
+  padding-bottom: 0.5em !important;
+}
+.@{class-prefix}-pl-em-p5,
+.@{class-prefix}-px-em-p5 {
+  padding-left: 0.5em !important;
+}
+.@{class-prefix}-pr-em-p5,
+.@{class-prefix}-px-em-p5 {
+  padding-right: 0.5em !important;
+}
+.@{class-prefix}-pt-em-p7,
+.@{class-prefix}-py-em-p7 {
+  padding-top: 0.7em !important;
+}
+.@{class-prefix}-pb-em-p7,
+.@{class-prefix}-py-em-p7 {
+  padding-bottom: 0.7em !important;
+}
+.@{class-prefix}-pl-em-p7,
+.@{class-prefix}-px-em-p7 {
+  padding-left: 0.7em !important;
+}
+.@{class-prefix}-pr-em-p7,
+.@{class-prefix}-px-em-p7 {
+  padding-right: 0.7em !important;
+}
+
+.@{class-prefix}-pt-em-1,
+.@{class-prefix}-py-em-1 {
+  padding-top: 1em !important;
+}
+.@{class-prefix}-pb-em-1,
+.@{class-prefix}-py-em-1 {
+  padding-bottom: 1em !important;
+}
+.@{class-prefix}-pl-em-1,
+.@{class-prefix}-px-em-1 {
+  padding-left: 1em !important;
+}
+.@{class-prefix}-pr-em-1,
+.@{class-prefix}-px-em-1 {
+  padding-right: 1em !important;
+}
+
+.@{class-prefix}-pt-em-1p5,
+.@{class-prefix}-py-em-1p5 {
+  padding-top: 1.5em !important;
+}
+.@{class-prefix}-pb-em-1p5,
+.@{class-prefix}-py-em-1p5 {
+  padding-bottom: 1.5em !important;
+}
+.@{class-prefix}-pl-em-1p5,
+.@{class-prefix}-px-em-1p5 {
+  padding-left: 1.5em !important;
+}
+.@{class-prefix}-pr-em-1p5,
+.@{class-prefix}-px-em-1p5 {
+  padding-right: 1.5em !important;
+}
+
+.@{class-prefix}-pt-em-2,
+.@{class-prefix}-py-em-2 {
+  padding-top: 2em !important;
+}
+.@{class-prefix}-pb-em-2,
+.@{class-prefix}-py-em-2 {
+  padding-bottom: 2em !important;
+}
+.@{class-prefix}-pl-em-2,
+.@{class-prefix}-px-em-2 {
+  padding-left: 2em !important;
+}
+.@{class-prefix}-pr-em-2,
+.@{class-prefix}-px-em-2 {
+  padding-right: 2em !important;
+}
+
+.@{class-prefix}-pt-em-2p5,
+.@{class-prefix}-py-em-2p5 {
+  padding-top: 2.5em !important;
+}
+.@{class-prefix}-pb-em-2p5,
+.@{class-prefix}-py-em-2p5 {
+  padding-bottom: 2.5em !important;
+}
+.@{class-prefix}-pl-em-2p5,
+.@{class-prefix}-px-em-2p5 {
+  padding-left: 2.5em !important;
+}
+.@{class-prefix}-pr-em-2p5,
+.@{class-prefix}-px-em-2p5 {
+  padding-right: 2.5em !important;
+}
+
+.@{class-prefix}-pt-em-3,
+.@{class-prefix}-py-em-3 {
+  padding-top: 3em !important;
+}
+.@{class-prefix}-pb-em-3,
+.@{class-prefix}-py-em-3 {
+  padding-bottom: 3em !important;
+}
+.@{class-prefix}-pl-em-3,
+.@{class-prefix}-px-em-3 {
+  padding-left: 3em !important;
+}
+.@{class-prefix}-pr-em-3,
+.@{class-prefix}-px-em-3 {
+  padding-right: 3em !important;
+}
+
+.@{class-prefix}-pt-em-4,
+.@{class-prefix}-py-em-4 {
+  padding-top: 4em !important;
+}
+.@{class-prefix}-pb-em-4,
+.@{class-prefix}-py-em-4 {
+  padding-bottom: 4em !important;
+}
+.@{class-prefix}-pl-em-4,
+.@{class-prefix}-px-em-4 {
+  padding-left: 4em !important;
+}
+.@{class-prefix}-pr-em-4,
+.@{class-prefix}-px-em-4 {
+  padding-right: 4em !important;
+}
+
+.@{class-prefix}-pt-em-5,
+.@{class-prefix}-py-em-5 {
+  padding-top: 5em !important;
+}
+.@{class-prefix}-pb-em-5,
+.@{class-prefix}-py-em-5 {
+  padding-bottom: 5em !important;
+}
+.@{class-prefix}-pl-em-5,
+.@{class-prefix}-px-em-5 {
+  padding-left: 5em !important;
+}
+.@{class-prefix}-pr-em-5,
+.@{class-prefix}-px-em-5 {
+  padding-right: 5em !important;
+}
+
+// ss line height em
+.@{class-prefix}-lh-em-p5 {
+  line-height: 0.5em !important;
+}
+.@{class-prefix}-lh-em-1 {
+  line-height: 1em !important;
+}
+.@{class-prefix}-lh-em-1p5 {
+  line-height: 1.5em !important;
+}
+.@{class-prefix}-lh-em-2 {
+  line-height: 2em !important;
+}
+.@{class-prefix}-lh-em-2p5 {
+  line-height: 2.5em !important;
+}
+.@{class-prefix}-lh-em-3 {
+  line-height: 3em !important;
+}
+
+// ss button
+.@{class-prefix}-ss-btn {
+  height: 35px !important;
+}
+.@{class-prefix}-ss-btn-small {
+  height: 30px !important;
+}
+.@{class-prefix}-ss-btn-small {
+  height: 30px !important;
+  &-r5 {
+    height: 25px !important;
+    font-size: 12px;
+    border-radius: 5px !important;
+  }
+}
+.@{class-prefix}-ss-btn-esmall {
+  height: 23px !important;
+  border-radius: 5px !important;
+}
+.@{class-prefix}-ss-btn-medium {
+  height: 42px !important;
+  width: 230px;
+  margin: 0;
+  border: 2px solid #ddd !important;
+  background: transparent !important;
+}
+.@{class-prefix}-ss-btn-elarge {
+  height: 45px !important;
+  border-width: 2px !important;
+}
+.@{class-prefix}-ss-btn-large {
+  height: 48px !important;
+  border-width: 2px !important;
+}
+.@{class-prefix}-ss-btn-gray {
+  background: #bdbdbd !important;
+  color: white !important;
+}
+.@{class-prefix}-ss-btn-white {
+  background: white !important;
+  color: #bdbdbd !important;
+  border-color: #d5d5d5 !important;
+}
+.ant-btn-background-ghost {
+  color: @primary-color !important;
+  border-color: @primary-color !important;
+  border-radius: 9px !important;
+}
+
+// ss horver cursor 
+.@{class-prefix}-hover-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.@{class-prefix}-hover-notallow {
+  -moz-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+.@{class-prefix}-hover-bg-f8 {
+  &:hover {
+    background: #f8f8f8;
+  }
+}
+.@{class-prefix}-hover-bg-d {
+  &:hover {
+    background: #eee;
+  }
+}
+.@{class-prefix}-hover-bg-c {
+  &:hover {
+    background: #ccc;
+  }
+}
+.@{class-prefix}-bg-c {
+    background: #ccc;
+}

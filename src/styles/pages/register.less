@@ -1,0 +1,58 @@
+.@{class-prefix}-register-wrapper {
+  width: 100vw;
+  height: 100vh;
+  .logo-div {
+    height: 150px;
+    img {
+      height: 50%;
+    }
+  }
+  .register-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 150px);
+    overflow-y: auto;
+    .register-title {
+      font-size: 40px;
+    }
+    .form-wrapper {
+      margin-top: 30px;
+      width: 472px;
+      padding-right: 20px;
+      padding-left: 20px;
+      .login-desc {
+        margin-top: 10px;
+        line-height: 21px;
+        margin-bottom: 35px;
+      }
+      .username-wrapper {
+        margin-bottom: 9px;
+        .ant-col.ant-form-item-label {
+          padding-bottom: 5px !important;
+          label {
+            color: @ss-gray-1;
+            font-size: 11px;
+          }
+        }
+      }
+      .password-wrapper {
+        margin-bottom: 8px;
+        .ant-col.ant-form-item-label {
+          padding-bottom: 5px !important;
+          label {
+            color: @ss-gray-1;
+            font-size: 11px;
+          }
+        }
+      }
+      .hr {
+        margin-right: -20px;
+        margin-left: -20px;
+      }
+      .login-alert {
+        background: #e9a2ad;
+      }
+    }
+  }
+}
